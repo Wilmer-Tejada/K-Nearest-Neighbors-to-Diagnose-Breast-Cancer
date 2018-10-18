@@ -1,15 +1,8 @@
 # Machine-Learning-in-R
 
----
-title: "Breast Cancer Diagnosis using K-Nearest Neighbors"
-output:
-  word_document: default
-  html_notebook: default
-  pdf_document: default
-  html_document: default
----
+#Breast Cancer Diagnosis using K-Nearest Neighbors
 
-#Using the KNN algorithm, we would like to predict whether a tumor is Benign (B) or Malignant (M).
+##Using the KNN algorithm, we would like to predict whether a tumor is Benign (B) or Malignant (M).
 
 #Step 1: Collecting Data
 We will be using the wisc_bc_data.csv (Wisconsin Breast Cancer Diagnostic) which is a common dataset provided by UCI data reository. This data file contains measurements from digitized images of fine-needle aspirate of a breast mass. The breast cancer data includes 569 examples of cancer biopsies, each with 32 features. One feature is an identification number, another is the cancer diagnosis, and 30 are numeric-valued laboratory measurements such as radius, smoothness, symmetry, etc.
