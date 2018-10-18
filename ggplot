@@ -1,0 +1,38 @@
+---
+title: "Stat. 651 ggplot2"
+author: "Prof. Eric A. Suess"
+date: "10/15/2018"
+output: github_document
+---
+
+ggplot2 examples
+
+```{r message=FALSE}
+library(tidyverse)
+library(mdsr)
+```
+
+# CIACounties
+
+Make the base plot **g** and then add different layers on to it.
+
+```{r}
+head(CIACountries)
+
+# base plot g
+
+g <- CIACountries %>% ggplot(aes(y = gdp, x = educ)) 
+
+g + geom_point()
+
+g + geom_point(size = 3)
+
+g + geom_point(aes(color = net_users), size = 3)
+
+# no geom_point used for the next picture
+
+g + geom_text( aes(label = country, color = net_users), size = 3 )
+
+g + geom_point( aes(color = net_users, size = roadways) )
+
+```
