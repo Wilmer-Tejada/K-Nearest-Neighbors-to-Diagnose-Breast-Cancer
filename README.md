@@ -6,7 +6,7 @@
 # Step 1: Collecting Data
 We will be using the wisc_bc_data.csv (Wisconsin Breast Cancer Diagnostic) which is a common dataset provided by UCI data reository. This data file contains measurements from digitized images of fine-needle aspirate of a breast mass. The breast cancer data includes 569 examples of cancer biopsies, each with 32 features. One feature is an identification number, another is the cancer diagnosis, and 30 are numeric-valued laboratory measurements such as radius, smoothness, symmetry, etc.
 
-```{r}
+``` r 
 library(class);library(gmodels);library(car)
 datasetLocation="http://www.sci.csueastbay.edu/~esuess/classes/Statistics_6620/Presentations/ml4/wisc_bc_data.csv"
 wbcd <- read.csv(url(datasetLocation))
@@ -14,19 +14,19 @@ wbcd <- read.csv(url(datasetLocation))
 
 # Step 2: Preparing and Exploring the Data
 #### Removing ID Variable to avoid computation issues.
-```{r}
+``` r 
 wbcd = wbcd[-1]
 ```
 
 
 #### Table showing B (Benign) and M (Malignant) Diagnosis counts and proportions.
-```{r}
+``` r 
 table(wbcd$diagnosis)
 round(prop.table(table(wbcd$diagnosis)),digits = 2)
 ```
 #### We have 357 Benign (B) and 212 Malignant (M) counts.
 
-```{r}
+``` r 
 scatterplotMatrix(~radius_mean+texture_mean+perimeter_mean+area_mean+smoothness_mean | diagnosis, data=wbcd)
 ```
 
