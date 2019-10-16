@@ -1,6 +1,6 @@
 
 # Breast Cancer Diagnosis using K-Nearest Neighbors Algorithm (KNN)
-## NOTE: This is me wroking through an example from the Machine LEarning in R Textbook
+## NOTE: This is me wroking through an example from the Machine Learning in R Textbook
 
 ## Using the KNN algorithm, we would like to predict whether a tumor is Benign (B) or Malignant (M).
 
